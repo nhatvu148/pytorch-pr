@@ -81,7 +81,7 @@ for epoch in range(NUM_EPOCHS):
 
     # store loss
     losses.append(float(loss.data))
-    # print loss
+    # print losslinear_regression_batches
     if (epoch % 100 == 0):
         print(f"Epoch {epoch}, Loss: {loss.data}")
 
