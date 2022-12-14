@@ -26,7 +26,7 @@ venv:
 	@$(PIP) install --no-index torch-spline-conv -f https://pytorch-geometric.com/whl/torch-1.12.1+cpu.html
 
 check-py:
-	$(PYTHON) -m autopep8 --in-place --aggressive --aggressive notebooks/main.py notebooks/num.py
+	$(PYTHON) -m autopep8 --in-place --aggressive --aggressive ./*.py
 
 freeze: venv
 	@$(PIP) freeze > requirements.txt
