@@ -20,6 +20,10 @@ install: clean venv
 venv:
 	@$(create-venv)
 	@$(PIP) install -r requirements.txt
+	@$(PIP) install --no-index torch-scatter -f https://pytorch-geometric.com/whl/torch-1.12.1+cpu.html
+	@$(PIP) install --no-index torch-sparse -f https://pytorch-geometric.com/whl/torch-1.12.1+cpu.html
+	@$(PIP) install --no-index torch-cluster -f https://pytorch-geometric.com/whl/torch-1.12.1+cpu.html
+	@$(PIP) install --no-index torch-spline-conv -f https://pytorch-geometric.com/whl/torch-1.12.1+cpu.html
 
 check-py:
 	$(PYTHON) -m autopep8 --in-place --aggressive --aggressive notebooks/main.py notebooks/num.py
